@@ -101,7 +101,7 @@ O Expo abrirá o app no navegador.
 2. Abra o CMD e clone o repositório:
 
    ~~~cmd
-   git clone URL_DO_REPOSITORIO
+   git clone https://github.com/iuriwickert/anime-lista.git
    cd anime-lista
    ~~~
 
