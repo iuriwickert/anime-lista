@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS lista_animes
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+CREATE USER IF NOT EXISTS 'anime_app'@'localhost'
+  IDENTIFIED BY 'DEFINA_SUA_SENHA_LOCAL';
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+  ON lista_animes.*
+  TO 'anime_app'@'localhost';
+
+USE lista_animes;
+
+CREATE TABLE IF NOT EXISTS animes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(150) NOT NULL,
+  genero VARCHAR(100) DEFAULT '',
+  nota DECIMAL(3,1) NOT NULL,
+  capa_url VARCHAR(1000) DEFAULT '',
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
